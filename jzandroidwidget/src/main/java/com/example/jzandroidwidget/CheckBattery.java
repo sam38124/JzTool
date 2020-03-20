@@ -21,6 +21,6 @@ public class CheckBattery {
         int chargePlug = batteryStatusIntent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
         boolean usbCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_USB;
         boolean acCharge = chargePlug == BatteryManager.BATTERY_PLUGGED_AC;
-        return acCharge||usbCharge;
+        return isCharging;
     }
 }
