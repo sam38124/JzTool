@@ -1,9 +1,9 @@
-package com.example.jzandroidwidget.widget
+package com.example.jzandroidwidget
 
 import java.text.SimpleDateFormat
 import java.util.*
 
- class JzTimer{
+ class JzClock{
     val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS")
     var past = sdf.parse(sdf.format(Date()))
 
