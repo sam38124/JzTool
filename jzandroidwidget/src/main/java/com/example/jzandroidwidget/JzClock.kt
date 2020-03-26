@@ -10,13 +10,13 @@ import java.util.*
     fun Zeroing(){
         past = sdf.parse(sdf.format(Date()))
     }
-    fun stop():Long{
+    fun stop():Double{
         val now = sdf.parse(sdf.format(Date()))
         return getDatePoor(now,past)
     }
-    fun getDatePoor(endDate: Date, nowDate: Date): Long {
+    fun getDatePoor(endDate: Date, nowDate: Date): Double {
         val diff = endDate.time - nowDate.time
         val sec = diff / 1000
-        return sec
+        return sec.toDouble()
     }
 }
