@@ -1,5 +1,6 @@
 package com.example.jzandroidwidget
 
+import android.util.Log
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -12,11 +13,13 @@ import java.util.*
     }
     fun stop():Double{
         val now = sdf.parse(sdf.format(Date()))
+
         return getDatePoor(now,past)
     }
     fun getDatePoor(endDate: Date, nowDate: Date): Double {
         val diff = endDate.time - nowDate.time
-        val sec = diff / 1000
+        val sec = diff.toDouble() / 1000
+        Log.e("stop",""+sec)
         return sec.toDouble()
     }
 }

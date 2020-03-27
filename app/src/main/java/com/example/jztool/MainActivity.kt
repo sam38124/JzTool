@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var a=0
         findViewById<Button>(R.id.button2).setOnClickListener {
-            JzTool.newInstance.runTaskTimer("$a",5.0, runner{
+            JzTool.newInstance.runTaskTimer("$a",0.01, runner{
                 Log.e("runner","run")
             })
         }
